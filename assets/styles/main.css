@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+VARIABLES GLOBALES
+*/
+:root {
+    --primary-bg-color: green;
+    /* global scope */
+    --primary-color: #00A8A8;
+    --secondary-color: #177575;
+    --tertiary-color: #1B4242;
+
+    --danger-color: #A83E00;
+    --warning-color: #A86B00;
+    --success-color: #00A849;
+    --info-color: #00A8A8
+}
+
+/* Reglas globales para todo el sitio web */
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Jost";
+}
+
+
+/*
+Barra de Navegación
+*/
+#navbar {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    color: black;
+
+    font-family: "Roboto";
+}
+
+header {
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+#navbar #header-1 {
+    margin-left: 0px;
+    padding-left: 0px;
+    border: 0px;
+}
+
+#navbar #header-2 {
+    margin-left: 0px;
+    padding-left: 0px;
+    border: 0px;
+    color: var(--primary-color);
+}
+
+#navbar>header {
+    justify-items: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav>ul>li>a {
+    display: inline;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+
+/*
+Display principal de vehículo
+*/
+.display-vehicle {
+    background-color: var(--tertiary-color);
+    padding-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 16px;
+}
+
+.title {
+    font-size: x-large;
+    font-family: "Nunito";
+    color: white;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.title-sub-2 {
+    color: var(--primary-color);
+}
+
+.more-info-btn {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: 0px;
+    color: white;
+    font-size: large;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.sub-icon {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+}
+
+.icon-text-info {
+    font-family: "Jost";
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.vehicle-image {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.vehicle-image>img {
+    height: 240px;
+    width: 320px;
+    right: 0px;
+}
+
+/*----------------------*/
+.services-container{
+    background-color: var(--tertiary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    padding-bottom: 32px;
+}
+
+.service-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito';
+}
+
+.services-container span{
+    text-align: center;
+    font-family: "Jost";
+}
+
+.service-elements{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-top: 48px;
+}
+.service-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+}
+.service-element img{
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+}
+.service-element span{
+    width: 280px;
+    height: auto;
+    text-align: center;
+}
+.primary-button{
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: 0px;
+    color: white;
+    font-size: large;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.service-elements{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.service-element img{
+    width: 340px;
+}
+
+/*---------------------------------*/
+.contact-us-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 16px;
+}
+
+.contact-us-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us-form-container>form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.text-input{
+    height: 36px;
+    
+}
+/*para que la casilla se marque de un color del negocio y no por defecto*/
+.text-input:focus{
+    outline-color: var(--primary-color);
+}
+
+.checkbox-input{
+    display: flex;
+    align-content: center;
+    row-gap: 8px;
+}
+
+.checkbox-input span{
+    margin-right: 4px;
+}
+
+.map-container{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.map-container img{
+    max-width: 100%;
+}
+/*
+TABLET
+*/
+@media screen and (min-width: 640px) {
+    #navbar {
+        flex-direction: row;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    nav>ul>li>a {
+        font-size: medium;
+    }
+
+    .display-vehicle {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-right: 0px;
+        grid-auto-flow: column;
+        padding-bottom: 32px;
+    }
+
+
+    .vehicle-image {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .vehicle-image>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub-icon {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .more-info-btn {
+        width: 50%;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: xx-large;
+        font-family: "Nunito";
+    }
+    .contact-us-container{
+        flex-direction: row;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .contact-us-form-container{
+        width: 50%;
+    }
+    .map-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+    
+
+}
+
+
+/*
+Computadoras
+*/
+
+@media screen and (min-width: 1080px) {}
+
+/* Dispositivos mas grandes como televisores */
+@media screen and (min-width: 1920px) {}
